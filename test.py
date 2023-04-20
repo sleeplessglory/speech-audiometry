@@ -25,9 +25,9 @@ def search(video_name, keywords):
      
     if video_name and keywords: 
         results = {} 
-        for video in os.listdir('./videos'): 
+        for video in os.listdir('./static/videos'): 
             if video_name in video.lower(): 
-                audio_path = os.path.join('./audios', os.path.splitext(video)[0] + '.flac') 
+                audio_path = os.path.join('./static/audios', os.path.splitext(video)[0] + '.flac') 
                 if os.path.exists(audio_path): 
                     #print(audio_path)
                     text = transcribe(audio_path, language="en-GB, en-US, en-AU, nl, ru") 
@@ -41,16 +41,16 @@ def search(video_name, keywords):
 
     else: 
         if video_name: 
-            videos = [f for f in os.listdir('./videos') if video_name in f.lower()] 
+            videos = [f for f in os.listdir('./static/videos') if video_name in f.lower()] 
             print("List of videos by name:", videos, "\n")
 
         else: 
-            videos = [f for f in os.listdir('./videos')] 
+            videos = [f for f in os.listdir('./static/videos')] 
          
         if keywords: 
             results = {} 
             for video in videos: 
-                audio_path = os.path.join('./audios', os.path.splitext(video)[0] + '.flac') 
+                audio_path = os.path.join('./static/audios', os.path.splitext(video)[0] + '.flac') 
                 if os.path.exists(audio_path): 
                     text = transcribe(audio_path, language="en-GB, en-US, en-AU, nl, ru") 
                     count = text.lower().count(keywords) 
