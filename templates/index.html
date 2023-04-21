@@ -4,42 +4,45 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewpoint" content="width=device-width, initial scale=1.0">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="/static/style.css">
         <script src="script.js" defer></script>
         <title>Web Speech Audiometry</title>
     </head>
     <body>
         <form action="/search" method="POST">
-            <label for="video_name">Video name:</label>
-            <input type="text" id="video_name" name="video_name"><br><br>
-            <label for="keywords">Keywords:</label>
-            <input type="text" id="keywords" name="keywords"><br><br>
-            <!--
-            <select id="language" name="language">
-                <option value="en-US">English (US)</option>
-                <option value="en-UK">English (UK)</option>
-                <option value="en-AU">English (AU)</option>
-                <option value="ru-RU">Русский</option>
-                <option value="nl-NL">Nederlands</option>
-            </select><br><br>
-            -->
-            <input type="submit" value="Search">
+            <div class="search_boxes">
+                <label for="video_name"></label>
+                <input type="text" id="video_name" name="video_name" placeholder="Video name..."><br><br>
+                <label for="keywords"></label>
+                <input type="text" id="keywords" name="keywords" placeholder="Keywords..."><br><br>
+                <!--
+                <select id="language" name="language">
+                    <option value="en-US">English (US)</option>
+                    <option value="en-UK">English (UK)</option>
+                    <option value="en-AU">English (AU)</option>
+                    <option value="ru-RU">Русский</option>
+                    <option value="nl-NL">Nederlands</option>
+                </select><br><br>
+                -->
+                <input type="submit" value="Search">
+            </div>
         </form>
         <div class="video-container">
             <div class="video-list">
                 {% if videos %}
                 <h2>Results:</h2>
-                <ul>
                     {% for video in videos %}
-                        <div class="video-list">
-                            <video src="../videos/{{video}}" controls muted autoplay></video>
+                        <div class="video">
+                            <video width="840" height="480" controls>
+                                <source src="/static/videos/{{video}}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                             <h3 class="title">{{video}}</h3>
                         </div>
                     {% endfor %}
-                </ul>
                 {% else %}
                     <h2>No video found according to your request</h2>
-                {% endif %}    
+                {% endif %}
         </div>
     </body>
 </html>
