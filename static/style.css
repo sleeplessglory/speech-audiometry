@@ -4,8 +4,8 @@ body{
 }
 
 .video-container{
-    margin-top: 10px;
-    display: grid;
+    margin-top: 40px;
+    display: flex;
     height: auto;
     width: 100%;
 }
@@ -13,6 +13,12 @@ body{
 .video-list{
     margin-top: 100px;
     margin-left: 28%;
+    border: 2px solid #900505;
+    border-radius: 18px;
+    background-color: #900505;
+    width: 1000px;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .video{
