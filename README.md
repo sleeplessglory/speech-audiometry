@@ -7,7 +7,7 @@ All the users can find videos based on their names or keywords containing in spe
 The speech audiometry technology is being used in a program module when the keywords are typed in the corresponding search bar. One search bar is for video names, another one is for keywords.
 ![0](https://github.com/darkswan19/WebAppDip/assets/91571026/fcd84455-f3eb-42e2-b2dc-0a7a92450d6c)
 # Unit and Application Testing
-The application testing is shown in the picture above, manually being tested right on the web page. The videos containing more keywords than another one is shown higher in results.
+The application testing is shown in the picture above, manually being tested right on the web page. The video containing more keywords than another one is shown higher in results.
 The unit testing contains functions that automatically put diverse video names and keywords to define the amount of keywords. At the end of each test the list of sorted results is being returned.
 ![4](https://github.com/darkswan19/WebAppDip/assets/91571026/483f8291-689d-407a-b4cd-6d48a819e933)
 ![5](https://github.com/darkswan19/WebAppDip/assets/91571026/af5ec2ba-3026-42fc-9cd8-65e14f926784)
