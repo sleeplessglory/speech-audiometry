@@ -3,6 +3,12 @@ This project is a web application including speech audiometry technology. It's a
 This module is able to define keywords in one's speech off the video and find those videos.
 # The Algorithm
 All the users can find videos based on their names or keywords containing in speech data in videos. The program find keywords in relevant videos and count the amount of keywords in each one. Then videos are being sorted by the amount of found keywords, which makes videos show as relevant as the amount of keywords within them. The more keywords are being found in speech data, the higher the video is being shown in the list of results.
+# Digital platform architecture
+
+![Архитектура системы веб-сервиса](https://github.com/user-attachments/assets/d8ad4328-1bdd-49c5-aa17-c6bc2e1ec353)
+# Digital platform model
+
+![Модель системы веб-сервиса](https://github.com/user-attachments/assets/2a0a23d9-7611-4ac0-87fc-6305d115d393)
 # Interface of the Web Page With Results
 The speech audiometry technology is being used in a program module when the keywords are typed in the corresponding search bar. One search bar is for video names, another one is for keywords.
 ![0](https://github.com/darkswan19/WebAppDip/assets/91571026/fcd84455-f3eb-42e2-b2dc-0a7a92450d6c)
